@@ -8,9 +8,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -87,6 +90,21 @@ fun DataIsian(
                         label = { Text("Isikan alamat") },
                         modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp), minLines = 3
                     )
+                }
+            }
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Button(onClick = onBerandaBtnClick, modifier = Modifier.weight(1f).height(50.dp).padding(end = 8.dp), colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+                    Text("Beranda", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+                Button(
+                    onClick = { showDialog = true },
+                    modifier = Modifier.weight(1f).height(50.dp).padding(start = 8.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+                ) {
+                    Text("Submit", fontWeight = FontWeight.Bold)
                 }
             }
         }
