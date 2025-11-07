@@ -8,6 +8,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.questnavigasitugas_187.view.DataIsian
+import com.example.questnavigasitugas_187.view.Halaman1
+import com.example.questnavigasitugas_187.view.ListPesertaScreen
 
 enum class Navigasi {
     Splash,

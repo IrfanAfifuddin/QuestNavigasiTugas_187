@@ -10,12 +10,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.R
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -25,6 +25,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.questnavigasitugas_187.R
 
 data class Peserta (
     val namaLengkap: String,
@@ -40,8 +41,8 @@ fun ListPesertaScreen(
     onFormulirClick: () -> Unit
 ) {
     val dataPeserta = listOf(
-        Peserta("Putra", "Laki-laki", "Lajang", "Bantul"),
-        Peserta("Asha", "Perempuan", "Lajang", "Genuk")
+        Peserta("Apip", "Laki-laki", "Lajang", "Yogyakarta"),
+        Peserta("Kayla", "Perempuan", "Lajang", "Malang")
     )
 
     Scaffold(
