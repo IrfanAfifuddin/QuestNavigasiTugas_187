@@ -40,5 +40,22 @@ fun Halaman1(onMasukClick: () -> Unit) {
                 color = Color(0xFF5A4C9B)
             )
         }
+
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Image(
+                painter = painterResource(id = R.drawable.emyu),
+                contentDescription = "Logo Aplikasi",
+                modifier = Modifier.size(250.dp)
+            )
+
+            Spacer(modifier = Modifier.height(32.dp))
+
+            Text(
+                text = "Irfan Afifuddin\n20230140187",
+                fontSize = 18.sp,
+                textAlign = TextAlign.Center,
+                color = Color.DarkGray
+            )
+        }
     }
 }
