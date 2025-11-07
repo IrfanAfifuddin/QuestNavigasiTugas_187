@@ -109,6 +109,16 @@ fun DataIsian(
             }
         }
     }
+    DataDialog(
+        showDialog = showDialog,
+        onDismiss = { showDialog = false; onSumbitSuccess() },
+        data = mapOf(
+            "Nama" to namaLengkap.ifEmpty { "..." },
+            "Jenis Kelamin" to selectedJenisKelamin,
+            "Status" to selectedStatusKawin,
+            "Alamat" to alamat.ifEmpty { "..." }
+        )
+    )
 }
 
 @Composable
