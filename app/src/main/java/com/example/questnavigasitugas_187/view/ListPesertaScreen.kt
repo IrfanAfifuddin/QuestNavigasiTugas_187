@@ -14,6 +14,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.R
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -21,7 +22,9 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 data class Peserta (
     val namaLengkap: String,
@@ -79,5 +82,13 @@ fun ParticipantCard(peserta: Peserta) {
                 DataRowItem(label = stringResource(R.string.alamat), value = peserta.alamat, modifier = Modifier.weight(1f))
             }
         }
+    }
+}
+
+@Composable
+fun DataRowItem(label: String, value: String, modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Text(label.uppercase(), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(value, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
     }
 }
