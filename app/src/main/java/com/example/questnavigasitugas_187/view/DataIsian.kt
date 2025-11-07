@@ -5,3 +5,7 @@ import androidx.compose.runtime.Composable
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+fun DataIsian(
+    onSumbitSuccess: () -> Unit,
+    onBerandaBtnClick: () -> Unit
+)
