@@ -57,5 +57,20 @@ fun Halaman1(onMasukClick: () -> Unit) {
                 color = Color.DarkGray
             )
         }
+
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Button(
+                onClick = onMasukClick,
+                modifier = Modifier
+                    .fillMaxWidth(0.8f)
+                    .height(56.dp)
+            ) {
+                Text(text = "Masuk", fontSize = 20.sp)
+            }
+            Spacer(modifier = Modifier.height(50.dp))
+        }
     }
 }
